@@ -1,7 +1,24 @@
 fn main() {
-    let mut s = String::from("hello");
+    
+    let s1 = String::from("hello");
 
-    s.push_str(", world!");
+    let (s2, len) = calculate_length(s1);
 
-    println!("{s}");
+    println!("The length of '{s2}' is {len}.");
+
+    let b1 = String::from("aloha");
+
+    let len = calculate_breadth(&b1);
+
+    println!("The breadth of {b1} is {len}.");
+}
+
+fn calculate_length(s: String) -> (String, usize) {
+    let length = s.len(); // len() returns the length of a String
+
+    (s, length)
+}
+
+fn calculate_breadth(b: &String) -> usize {
+    b.len()
 }
