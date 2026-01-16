@@ -4,27 +4,30 @@ use rand::Rng;
 
 fn main() {
 
-    println!("Welcome to Guesstimator!");
+    println!("Welcome to Guest Season!");
 
     let secret_number = rand::thread_rng().gen_range(1..=100);
 
     loop {
-        println!("Enter your desired number: ");
+        println!("Enter your guess here: ");
 
         let mut guess = String::new();
 
         io::stdin()
             .read_line(&mut guess)
-            .expect("Failed to read line");
+            .expect("Failed to read line!");
 
-        let guess: u32 = guess.trim().parse().expect("Enter a valid Input!");
+        let guess: u32 = guess.trim().parse().expect("Enter a valid number!");
 
-        println!("Your guess is: {guess}");
+        println!("You guessed: {guess}");
 
         match guess.cmp(&secret_number) {
             Ordering::Less => println!("Too small!"),
             Ordering::Greater => println!("Too big!"),
-            Ordering::Equal => println!("You Win!!"),
+            Ordering::Equal => {
+                println!("You Win Man!!");
+                break;
+            }
         }
     }
 }
