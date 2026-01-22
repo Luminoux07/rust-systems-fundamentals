@@ -13,8 +13,6 @@ fn main() {
     println!("The size is of {} pixels.",
             area(&rect1));
     println!("This is size {rect1:#?}");
-
-    dbg!(&rect1);
     
 }
 
