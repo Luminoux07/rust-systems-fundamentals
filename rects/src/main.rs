@@ -12,8 +12,8 @@ impl Rectangle {
 
 fn main() {
     let rect1 = Rectangle {
-        width: 30,
-        _height: 50,
+        width: 50,
+        _height: 70,
     };
 
     if rect1.width() {
