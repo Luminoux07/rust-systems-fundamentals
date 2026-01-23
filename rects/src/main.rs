@@ -1,22 +1,22 @@
 #[derive(Debug)]
 struct Rectangle {
     width: u32,
-    height: u32,
+    _height: u32,
+}
+
+impl Rectangle {
+    fn width(&self) -> bool {
+        self.width > 0
+    }
 }
 
 fn main() {
     let rect1 = Rectangle {
-        width: 40,
-        height: 50,
+        width: 30,
+        _height: 50,
     };
 
-    println!("The size is of {} pixels.",
-            area(&rect1));
-    println!("This is size {rect1:#?}");
-    
+    if rect1.width() {
+        println!("The rectangle has a nonzero {}", rect1.width);
+    }
 }
-
-fn area(rectangle: &Rectangle) -> u32 {
-    rectangle.width * rectangle.height
-}
-
