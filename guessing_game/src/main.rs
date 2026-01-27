@@ -6,14 +6,15 @@ fn main() {
     println!("🎲 Welcome to the Number Guessing Game!");
     println!("=======================================");
     
-    // Generate a random number between 1 and 100
-    let secret_number = rand::thread_rng().gen_range(1..=100);
-    let mut attempts = 0;
-    
-    println!("\nI've picked a number between 1 and 100.");
-    println!("Can you guess what it is?\n");
-    
     loop {
+        // Generate a random number between 1 and 100
+        let secret_number = rand::thread_rng().gen_range(1..=100);
+        let mut attempts = 0;
+        
+        println!("\nI've picked a number between 1 and 100.");
+        println!("Can you guess what it is?\n");
+        
+        loop {
         println!("Please input your guess:");
         
         let mut guess = String::new();
@@ -64,6 +65,14 @@ fn main() {
                 break;
             }
         }
+    }
+    
+    println!("\nPlay again? (y/n)");
+    let mut choice = String::new();
+    io::stdin().read_line(&mut choice).unwrap();
+    if choice.trim().to_lowercase() != "y" {
+        break;
+    }
     }
     
     println!("\nThanks for playing! 👋");
