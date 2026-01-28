@@ -15,3 +15,12 @@ fn main() {
         }
     });
 }
+
+
+        println!("Play again? (y/n)");
+        let mut choice = String::new();
+        io::stdin().read_line(&mut choice).unwrap();
+
+        if choice.trim().to_lowercase() != "y" {
+            break;
+        }

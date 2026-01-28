@@ -6,11 +6,14 @@ fn main() {
 
     println!("The length of '{s2}' is {len}.");
 
+
+    // Referencing at work:
+
     let b1 = String::from("aloha");
 
     let len = calculate_breadth(&b1);
 
-    println!("The breadth of {b1} is {len}.");
+    println!("The breadth of '{b1}' is {len}.");
 }
 
 fn calculate_length(s: String) -> (String, usize) {

@@ -6,7 +6,7 @@ fn main() {
    } else {
         println!("condition was false");
    }
-
+   // Using modulo to check divisibility.
    if number % 4 == 0 {
         println!("number is divisible by 4");
     } else if number % 3 == 0 {
@@ -17,6 +17,7 @@ fn main() {
         println!("number is not divisible by 4, 3, or 2");
     }
 
+    // The below code evaluates the first option as true and the else as false
     let condition = false;
     let number = if condition { 3 } else { 7 };
 
