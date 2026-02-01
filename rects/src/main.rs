@@ -3,24 +3,16 @@ use std::time::Duration;
 fn main() {
     trpl::block_on(async {
         trpl::spawn_task(async {
-            for i in 1..20 {
+            for i in 1..30 {
                 println!("hi number {i} from the first task!");
                 trpl::sleep(Duration::from_millis(500)).await;
             }
         });
 
-        for i in 1..10 {
+        for i in 1..20 {
             println!("hi number {i} from the second task!");
             trpl::sleep(Duration::from_millis(500)).await;
         }
     });
 }
 
-
-        println!("Play again? (y/n)");
-        let mut choice = String::new();
-        io::stdin().read_line(&mut choice).unwrap();
-
-        if choice.trim().to_lowercase() != "y" {
-            break;
-        }
