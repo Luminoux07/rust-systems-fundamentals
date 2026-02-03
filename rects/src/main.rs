@@ -9,7 +9,7 @@ fn main() {
             }
         });
 
-        for i in 1..20 {
+        for i in 1..10 {
             println!("hi number {i} from the second task!");
             trpl::sleep(Duration::from_millis(500)).await;
         }
