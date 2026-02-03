@@ -3,6 +3,8 @@ mod front_of_house {
         fn add_to_waitlist() {}
 
         fn seat_at_table() {}
+
+        fn table_number() {}
     }
 
     mod serving {
