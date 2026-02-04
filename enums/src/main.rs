@@ -13,7 +13,7 @@ fn main() {
             Coin::Penny => 1,
             Coin::Nickel => 5,
             Coin::Dime => 10,
-            Coin::Quarter => 25,
+            Coin::Quarter => 30,
         }
     }
 }
