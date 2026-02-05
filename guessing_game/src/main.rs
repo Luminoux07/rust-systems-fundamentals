@@ -34,7 +34,7 @@ fn main() {
                 num
             }
             Err(_) => {
-                println!("⚠️  Please enter a valid number!\n");
+                println!("⚠️  Please enter a very valid number!\n");
                 continue;
             }
         };
@@ -48,7 +48,7 @@ fn main() {
             Ordering::Less => println!("📉 Too small! Try a bigger number.\n"),
             Ordering::Greater => println!("📈 Too big! Try a smaller number.\n"),
             Ordering::Equal => {
-                println!("\n🎉 Congratulations! You guessed the correct number!");
+                println!("\n🎉 Congratulations! You guessed the number correctly!");
                 println!("🏆 You won in {} attempt{}!", 
                     attempts, 
                     if attempts == 1 { "" } else { "s" }
