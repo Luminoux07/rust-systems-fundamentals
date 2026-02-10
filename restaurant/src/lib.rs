@@ -26,8 +26,6 @@ pub fn eat_at_restaurant() {
         pub fn take_order() {}
 
         pub fn serve_order() {}
-
-        pub fn take_payment() {}
     }
 }
 
