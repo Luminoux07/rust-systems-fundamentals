@@ -1,0 +1,11 @@
+[package]
+name = "bank_app"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# UUID generation for unique transaction and account IDs
+uuid = { version = "1.6", features = ["v4"] }
+
+# Date and time handling for transaction timestamps
+chrono = "0.4"
