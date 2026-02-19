@@ -4,7 +4,7 @@ fn main() {
     let result = loop {
         counter += 2;
 
-        if counter == 40 {
+        if counter == 20 {
             break counter * 2;
         }
     };
